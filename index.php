@@ -6,4 +6,4 @@ use App\ChatDataAnalysis;
 
 $instance = new ChatDataAnalysis();
 
-echo $instance->sayHi();
+echo $instance->analysis();

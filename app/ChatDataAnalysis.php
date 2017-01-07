@@ -1,19 +1,25 @@
 <?php
 namespace App;
 
+use Carbon\Carbon;
 use \GuzzleHttp\Client;
 
 class ChatDataAnalysis {
-    public function sayHi()
+    public function analysis()
     {
         $guzzle_client = new Client();
 
-        $response = $guzzle_client->request('GET', 'https://api.bitflyer.jp/v1/getchats?from_date=2017-01-07T10:00:00');
+        $now = new Carbon();
+        $from_date = $now->subDay()->toIso8601String();
 
+        $response = $guzzle_client->request('GET', 'https://api.bitflyer.jp/v1/getchats',[
+                                                'query' => ['from_date' => $from_date]
+                                            ]);
         $array_data = json_decode($response->getBody());
 
-        var_dump(\MeCab\split("私はphp7でmecabを使いたい"));
+        var_dump($array_data);
 
+        // var_dump(\MeCab\split("私はphp7でmecabを使いたい"));
 
         return true;
     }
