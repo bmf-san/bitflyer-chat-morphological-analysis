@@ -1,7 +1,7 @@
 **Under Development**
 
-Bitflyer Chat Morphological Analysis
-Analysis the words of chat in a biflyer lightning dashboard by using Morphological Analysis and Semantic Orientations of Words.
+# Bitflyer Chat Morphological Analysis
+Analysis the words of chat in a biflyer lightning dashboard by using MeCab.
 
 # Architecture
 * PHP7
