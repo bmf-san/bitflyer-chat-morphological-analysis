@@ -5,7 +5,7 @@ Analysis the words of chat in a biflyer lightning dashboard by using Morphologic
 
 # Architecture
 * PHP7
-* Mecab
+* MeCab
 * [bitflyer APi](https://bitflyer.jp/ja/api)
 * [Semantic Orientations of Words](http://www.lr.pi.titech.ac.jp/~takamura/pndic_ja.html)    
 
