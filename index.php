@@ -4,6 +4,6 @@ require "vendor/autoload.php";
 
 use App\ChatDataAnalysis;
 
-$instance = new ChatDataAnalysis();
+$chat_data_analysis = new ChatDataAnalysis();
 
-echo $instance->analysis();
+echo $chat_data_analysis->analysis();

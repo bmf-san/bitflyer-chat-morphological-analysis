@@ -8,18 +8,19 @@ class ChatDataAnalysis {
     public function analysis()
     {
         $guzzle_client = new Client();
-
-        $now = new Carbon();
-        $from_date = $now->subDay()->toIso8601String();
-
+        $today = Carbon::today();
         $response = $guzzle_client->request('GET', 'https://api.bitflyer.jp/v1/getchats',[
-                                                'query' => ['from_date' => $from_date]
+                                                'query' => ['from_date' => $today]
                                             ]);
         $array_data = json_decode($response->getBody());
 
-        var_dump($array_data);
+        // Split array data by MeCab
 
-        // var_dump(\MeCab\split("私はphp7でmecabを使いたい"));
+        // Analysis splited data by data.json
+
+
+
+        // Ex. var_dump(\MeCab\split("私の名前は太郎です。"));
 
         return true;
     }
