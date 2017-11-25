@@ -11,7 +11,9 @@ Analysis the words of chat in a biflyer lightning dashboard by using MeCab.
 
 # Building
 `git clone https://github.com/bmf-san/laravel-mecab-bitflyer-chat-morphological-analysis.git`  
+
 `composer dump-autoload`
+
 `composer install`  
 
 Now you can start Application!
